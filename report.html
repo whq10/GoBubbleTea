@@ -1,0 +1,424 @@
+<html>
+<head>
+    <title>Go Bubble Tea Report</title>
+
+
+    	<!-- stylesheets css -->
+    	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+      	<link rel="stylesheet" href="css/magnific-popup.css">
+
+    	<link rel="stylesheet" href="css/animate.min.css">
+    	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+      	<link rel="stylesheet" href="css/nivo-lightbox.css">
+      	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+
+      	<link rel="stylesheet" href="css/hover-min.css">
+      	<link rel="stylesheet" href="css/flexslider.css">
+
+    	<link rel="stylesheet" href="css/style.css">
+
+      	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+      	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600' rel='stylesheet' type='text/css'>
+
+
+    <script type="text/javascript" src="./js/fusioncharts/js/fusioncharts.js"></script>
+    <script type="text/javascript" src="./js/fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
+    <script type="text/javascript">
+
+    FusionCharts["debugger"].outputTo(function (message) {
+        document.getElementById('debugger-output').innerHTML += '<p>' +
+            message + '</p>';
+    });
+    FusionCharts["debugger"].enable(false);
+
+
+        FusionCharts.ready(function() {
+            var revenueChart1 = new FusionCharts({
+                "type": "column2d",
+                "renderAt": "chartContainer1",
+                "width": "500",
+                "height": "400",
+                "dataFormat": "json",
+                "dataSource": {
+                    "chart": {
+                        "caption": "Monthly revenue for last year",
+                        "subCaption": "Harry's SuperMart",
+                        "xAxisName": "Month",
+                        "yAxisName": "Revenues (In USD)",
+                        "theme": "fint"
+                    },
+                    "data": [{
+                            "label": "Jan",
+                            "value": "420000"
+                        },
+                        {
+                            "label": "Feb",
+                            "value": "810000"
+                        },
+                        {
+                            "label": "Mar",
+                            "value": "720000"
+                        },
+                        {
+                            "label": "Apr",
+                            "value": "550000"
+                        },
+                        {
+                            "label": "May",
+                            "value": "910000"
+                        },
+                        {
+                            "label": "Jun",
+                            "value": "510000"
+                        },
+                        {
+                            "label": "Jul",
+                            "value": "680000"
+                        },
+                        {
+                            "label": "Aug",
+                            "value": "620000"
+                        },
+                        {
+                            "label": "Sep",
+                            "value": "610000"
+                        },
+                        {
+                            "label": "Oct",
+                            "value": "490000"
+                        },
+                        {
+                            "label": "Nov",
+                            "value": "900000"
+                        },
+                        {
+                            "label": "Dec",
+                            "value": "730000"
+                        }
+                    ]
+                }
+
+            });
+            revenueChart1.render();
+
+///////////////////
+            var revenueChart2 = new FusionCharts({
+              type: 'column3d',
+              renderAt: 'chartContainer2',
+              width: '500',
+              height: '400',
+              dataFormat: 'jsonurl',
+              dataSource: 'http://localhost:8080/data.json'
+            });
+            revenueChart2.render();
+
+
+
+
+            ////
+            var revenueChart3 = new FusionCharts({
+        type: 'bubble',
+        renderAt: 'chartContainer3',
+        width: '500',
+        height: '400',
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "caption": "Sales Analysis of Shoe Brands",
+                "subcaption": "Last Quarter",
+                "xAxisMinValue": "0",
+                "xAxisMaxValue": "100",
+                "yAxisMinValue": "0",
+                "yAxisMaxValue": "30000",
+                "plotFillAlpha": "70",
+                "plotFillHoverColor": "#6baa01",
+                "showPlotBorder": "0",
+                "xAxisName": "Average Price",
+                "yAxisName": "Units Sold",
+                "numDivlines": "2",
+                "showValues":"1",
+                "showTrendlineLabels": "0",
+                "plotTooltext": "$name : Profit Contribution - $zvalue%",
+                "drawQuadrant" : "1",
+                "quadrantLineAlpha" : "80",
+                "quadrantLineThickness" : "3",
+                "quadrantXVal" : "50",
+                "quadrantYVal": "15000",
+                //Quadrant Labels
+                "quadrantLabelTL": "Low Price / High Sale",
+                "quadrantLabelTR": "High Price / High Sale",
+                "quadrantLabelBL": "Low Price / Low Sale",
+                "quadrantLabelBR": "High Price / Low Sale",
+
+                //Cosmetics
+                "baseFontColor" : "#333333",
+                "baseFont" : "Helvetica Neue,Arial",
+                "captionFontSize" : "14",
+                "subcaptionFontSize" : "14",
+                "subcaptionFontBold" : "0",
+                "showBorder" : "0",
+                "bgColor" : "#ffffff",
+                "showShadow" : "0",
+                "canvasBgColor" : "#ffffff",
+                "canvasBorderAlpha" : "0",
+                "divlineAlpha" : "100",
+                "divlineColor" : "#999999",
+                "divlineThickness" : "1",
+                "divLineIsDashed" : "1",
+                "divLineDashLen" : "1",
+                "divLineGapLen" : "1",
+                "use3dlighting" : "0",
+                "showplotborder" : "0",
+                "showYAxisLine" : "1",
+                "yAxisLineThickness" : "1",
+                "yAxisLineColor" : "#999999",
+                "showXAxisLine" : "1",
+                "xAxisLineThickness" : "1",
+                "xAxisLineColor" : "#999999",
+                "showAlternateHGridColor" : "0",
+                "showAlternateVGridColor" : "0"
+
+            },
+            "categories": [
+                {
+                    "category": [
+                        {
+                            "label": "$0",
+                            "x": "0"
+                        },
+                        {
+                            "label": "$20",
+                            "x": "20",
+                            "showverticalline": "1"
+                        },
+                        {
+                            "label": "$40",
+                            "x": "40",
+                            "showverticalline": "1"
+                        },
+                        {
+                            "label": "$60",
+                            "x": "60",
+                            "showverticalline": "1"
+                        },
+                        {
+                            "label": "$80",
+                            "x": "80",
+                            "showverticalline": "1"
+                        }, {
+                            "label": "$100",
+                            "x": "100",
+                            "showverticalline": "1"
+                        }
+                    ]
+                }
+            ],
+            "dataset": [
+                {
+                    "color":"#00aee4",
+                    "data": [
+                        {
+                            "x": "80",
+                            "y": "15000",
+                            "z": "24",
+                            "name": "Nike"
+                        },
+                        {
+                            "x": "60",
+                            "y": "18500",
+                            "z": "26",
+                            "name": "Adidas"
+                        },
+                        {
+                            "x": "50",
+                            "y": "19450",
+                            "z": "19",
+                            "name": "Puma"
+                        },
+                        {
+                            "x": "65",
+                            "y": "10500",
+                            "z": "8",
+                            "name": "Fila"
+                        },
+                        {
+                            "x": "43",
+                            "y": "8750",
+                            "z": "5",
+                            "name": "Lotto"
+                        },
+                        {
+                            "x": "32",
+                            "y": "22000",
+                            "z": "10",
+                            "name": "Reebok"
+                        },
+                        {
+                            "x": "44",
+                            "y": "13000",
+                            "z": "9",
+                            "name": "Woodland"
+                        }
+                    ]
+                }
+            ],
+            "trendlines": [
+                {
+                    "line": [
+                        {
+                            "startValue": "20000",
+                            "endValue": "30000",
+                            "isTrendZone": "1",
+                            "color": "#aaaaaa",
+                            "alpha": "14"
+                        },
+                        {
+                            "startValue": "10000",
+                            "endValue": "20000",
+                            "isTrendZone": "1",
+                            "color": "#aaaaaa",
+                            "alpha": "7"
+                        }
+                    ]
+                }
+            ],
+            "vTrendlines": [
+                {
+                    "line": [
+                        {
+                            "startValue": "44",
+                            "isTrendZone": "0",
+                            "color": "#0066cc",
+                            "thickness" : "1",
+                            "dashed" : "1",
+                            "displayValue": "Gross Avg."
+                        }
+                    ]
+                }
+            ]
+        }
+    });
+    revenueChart3.render();
+
+            ////
+            var revenueChart4 = new FusionCharts({
+                "type": "doughnut3d",
+                "renderAt": "chartContainer4",
+                "width": "500",
+                "height": "400",
+                "dataFormat": "json",
+                "dataSource": {
+                    "chart": {
+                        "caption": "Monthly revenue for last year",
+                        "subCaption": "Harry's SuperMart",
+                        "xAxisName": "Month",
+                        "yAxisName": "Revenues (In USD)",
+                        "theme": "fint"
+                    },
+                    "data": [{
+                            "label": "Jan",
+                            "value": "420000"
+                        },
+                        {
+                            "label": "Feb",
+                            "value": "810000"
+                        },
+                        {
+                            "label": "Mar",
+                            "value": "720000"
+                        },
+                        {
+                            "label": "Apr",
+                            "value": "550000"
+                        },
+                        {
+                            "label": "May",
+                            "value": "910000"
+                        },
+                        {
+                            "label": "Jun",
+                            "value": "510000"
+                        },
+                        {
+                            "label": "Jul",
+                            "value": "680000"
+                        },
+                        {
+                            "label": "Aug",
+                            "value": "620000"
+                        },
+                        {
+                            "label": "Sep",
+                            "value": "610000"
+                        },
+                        {
+                            "label": "Oct",
+                            "value": "490000"
+                        },
+                        {
+                            "label": "Nov",
+                            "value": "900000"
+                        },
+                        {
+                            "label": "Dec",
+                            "value": "730000"
+                        }
+                    ]
+                }
+
+            });
+            revenueChart4.render();
+        })
+    </script>
+</head>
+
+<body>
+
+  <!-- Navigation section -->
+  <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">Go Bubble Tea</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#top" class="smoothScroll">Home</a></li>
+          <li><a href="#feature" class="smoothScroll">Features</a></li>
+          <li><a href="#about" class="smoothScroll">About</a></li>
+          <li><a href="#menu" class="smoothScroll">Menu</a></li>
+          <li><a href="#team" class="smoothScroll">Team</a></li>
+          <li><a href="report.html" class="smoothScroll">Report</a></li>
+          <li><a href="#contact" class="smoothScroll">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+
+    <div>
+      <table>
+        <tr>
+          <td><div id="chartContainer1">FusionCharts XT will load here!</div></td>
+          <td><div id="chartContainer2">FusionCharts XT will load here!</div></td>
+        </tr>
+        <tr>
+          <td><div id="chartContainer3">FusionCharts XT will load here!</div></td>
+          <td><div id="chartContainer4">FusionCharts XT will load here!</div></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="debugger-output"></div>
+</body>
+
+</html>
