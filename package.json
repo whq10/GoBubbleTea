@@ -1,0 +1,13 @@
+{
+  "name": "GoBubbleTea",
+  "version": "1.0.0",
+  "description": "test for gobubbletea",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "standard"
+  },
+  "engines": {
+    "node": "8.11.3"
+  }
+}
