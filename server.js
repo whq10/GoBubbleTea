@@ -52,7 +52,12 @@ handler(req, res);
             var POST = qs.parse(body);
 
             if(isEmailExist(POST.email)){
-            	res.end("The email has already been used today. Please try it tomorrow.");
+            	//res.end("The email has already been used today. Please try it tomorrow.");
+              res.writeHead(302, {
+              'Location': './error.html'
+              //add other headers here...
+              });
+              res.end();
             	}
             	else{
             // use POST
