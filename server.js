@@ -57,7 +57,7 @@ handler(req, res);
             	else{
             // use POST
             var id = makeid(POST.email, url_parts.pathname);
-            res.end("Your promotion code is:   " + id);
+            //res.end("Your promotion code is:   " + id);
             try{
             	            sendEmail(POST.email, id);
                           res.writeHead(302, {
