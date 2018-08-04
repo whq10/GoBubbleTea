@@ -60,6 +60,11 @@ handler(req, res);
             res.end("Your promotion code is:   " + id);
             try{
             	            sendEmail(POST.email, id);
+                          res.writeHead(302, {
+                          'Location': './form.html'
+                          //add other headers here...
+                          });
+                          res.end();
             	}
             	catch(error){
             		console.error(error);
