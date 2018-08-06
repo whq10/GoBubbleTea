@@ -65,6 +65,7 @@ handler(req, res);
             //res.end("Your promotion code is:   " + id);
             try{
             	            sendEmail(POST.email, id);
+                          CreateDataJson();
                           res.writeHead(302, {
                           'Location': './form.html'
                           //add other headers here...
@@ -337,4 +338,39 @@ transporter.sendMail(mailOptions, function(error, info){
       res.write(fileToLoad);
       res.end();
   }
+}
+
+
+function CreateDataJson()
+{
+  //bruce
+  //console.log('bruce test here');
+          //create a json file
+          var fs = require("fs");
+  var fileContent = '\n\
+  {\n\
+      "chart": {\n\
+            "caption" : "Media Promotions Summary" ,\n\
+            "xAxisName" : "Media",\n\
+            "yAxisName" : "Promotions",\n\
+            "numberPrefix" : "$"\n\
+      },\n\
+  \
+      "data" :\n\
+       [\
+            { "label" : "58City", "value" : "14400" },\n\
+            { "label" : "ChineseWinnipeg", "value" : "19600" },\n\
+            { "label" : "YidoMedia", "value" : "24000" },\n\
+            { "label" : "SunPress", "value" : "15700" }\n\
+       ]\n\
+  }\n\
+  ';
+
+  fs.writeFile("./data.json", fileContent, (err) => {
+      if (err) {
+          console.error(err);
+      };
+      console.log("File has been created");
+  });
+
 }
