@@ -301,7 +301,31 @@ transporter.sendMail(mailOptions, function(error, info){
               isImage = 2;
               break;
           case "json":
-                  contentType = 'text/json';
+              contentType = 'text/json';
+              isImage = 2;
+              break;
+          case "eot":
+                  contentType = 'font/eot';
+                  isImage = 2;
+                  break;
+          case "svg":
+                  contentType = 'image/svg+xml';
+                  isImage = 1;
+                  break;
+          case "ttf":
+                  contentType = 'font/ttf';
+                  isImage = 2;
+                  break;
+          case "woff":
+                  contentType = 'font/woff';
+                  isImage = 2;
+                  break;
+          case "woff2":
+                  contentType = 'font/woff2';
+                  isImage = 2;
+                  break;
+          case "otf":
+                  contentType = 'font/otf';
                   isImage = 2;
                   break;
       }
