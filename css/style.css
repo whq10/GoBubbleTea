@@ -166,6 +166,15 @@ h2.test {
 	text-align: center;
 }
 
+h2.specials {
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 8px;
+	text-align: center;
+}
+
 h2.franchising {
   color: #ffffff;
   font-size: 40px;
@@ -237,6 +246,14 @@ a:focus {
 
 }
 
+.parallax-section-specials {
+
+	background-size: cover !important;
+  background-image: url("../images/nav-bar-backer-1alt.jpg");
+	background-position: center; /* Center the image */
+
+}
+
 .ga-paragraph-franchising {
   padding: 0px 15px 15px;
   font-size: 18px;
@@ -269,6 +286,72 @@ a:focus {
 	justify-content: center;
 }
 
+
+.go-container {
+  margin-bottom: 0px;
+  padding: 30px 0px;
+}
+
+.go-container.button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.go-container {
+	padding: 10px;
+}
+
+.go-container {
+	margin-bottom: 0px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.go-paragraph {
+  margin: 5px 0px;
+  font-family: Cabin, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  line-height: 130%;
+  font-style: normal;
+}
+
+.go-paragraph.emphasisb {
+  padding: 15px;
+  border: 1px solid #fff;
+  background-color: rgba(0, 0, 0, .05);
+  font-size: 18px;
+  line-height: 22px;
+  font-style: italic;
+  text-align: center;
+}
+
+.go-ingredients-row {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  background-color: transparent;
+}
 
 
 /* hover min css */
